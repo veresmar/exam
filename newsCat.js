@@ -29,7 +29,7 @@ addCat.addEventListener('click', function (event) {
   
 
   if (addCat.innerText.length == 0){
-    addCat.innerText = 'please add some task';
+    addCat.innerText = 'please add some category';
   }
   else {
     fetch("http://24api.ru/rest-news-category", {

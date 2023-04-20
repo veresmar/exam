@@ -1,3 +1,4 @@
+const wrap = document.getElementsByClassName('wrapper');
 
 // получение инфо о всех категориях
 const newsCatInfo = {
@@ -23,7 +24,7 @@ function createNewCat(categoty){
   const newCat = document.createElement('div');
   // спан (в нем название категории)
   const textCat = document.createElement('span');
-  textCat.innerHTML = categoty.name;
+  textCat.innerText = categoty.name;
   //обертка для всех категорий 
   const wrap = document.getElementsByClassName('wrapper');
   // что куда вкладываем: 
@@ -38,12 +39,11 @@ function createNewNews(news){
   newNews.className = 'news'
   // спан (в нем название новости)
   const textNews = document.createElement('span');
-  textNews.innerHTML = news.name;
-  //обертка для всех категорий 
-  const wrap = document.getElementsByClassName('wrapper');
+  textNews.innerText = news.name;
+  
   // что куда вкладываем: 
-  newCat.append(textCat);
-  wrap.append(newCat);
+  newNews.append(textNews);
+  wrap.append(newNews);
 }
 
 
